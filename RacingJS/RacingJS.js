@@ -49,7 +49,7 @@ function draw() {
   //frameRate(0.1);
   background(170);
   image(road_img,0, background_shift, 400, 1600);
-  background_shift -= speed;
+  background_shift -= 3*speed;
   if (background_shift == 0) background_shift=-999;
   
   if (countdown == 100 && opponent_index <number_of_opponents){
