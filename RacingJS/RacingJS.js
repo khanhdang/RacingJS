@@ -1,11 +1,12 @@
 var opponent_cars = [];
-var number_of_opponents = 25;
+var number_of_opponents = 10;
 var your_car;
 var safe_distance;
 var countdown = 100;
 var opponent_index = 0;
-
-var number_of_bonus = 2;
+var speed = -3;
+var background_shift = -999;
+var number_of_bonus = 10;
 var bonus = [];
 
 var car_dist_x;
@@ -22,6 +23,7 @@ var opponent_img;
 function preload(){
   yours_img = loadImage('images/yours.png');
   opponent_img = loadImage('images/opponent.png');
+  road_img = loadImage('images/road-1.png');
 }
 
 
@@ -44,12 +46,17 @@ function setup() {
 }
 
 function draw() {
+  //frameRate(0.1);
   background(170);
-
+  image(road_img,0, background_shift, 400, 1600);
+  background_shift -= speed;
+  if (background_shift == 0) background_shift=-999;
+  
   if (countdown == 100 && opponent_index <number_of_opponents){
     opponent_cars[opponent_index] = new Car();
     opponent_cars[opponent_index].color = color(0,0,255);
     opponent_cars[opponent_index].opponent = true;
+    //opponent_cars[opponent_index].speed = speed;
     opponent_index++;
     countdown--;
   } else if (countdown == 0){
@@ -58,14 +65,7 @@ function draw() {
     countdown--;
   }
 
-/*  if (keycheckfeq = 1) {*/
-    //checkPressedKey();
-    //keycheckfeq--;
-  //} else if (keycheckfeq == 0) {
-    //keycheckfeq = 1;
-  //} else {
-    //keycheckfeq--;
-  /*}*/
+
   checkPressedKey();
 
   if(your_car){

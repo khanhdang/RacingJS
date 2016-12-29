@@ -4,7 +4,7 @@ function Car() {
   this.width = 30;//random(10, 30);
   this.height = 45;//random(10, 30);
   this.speed = -3;
-  this.acceleration = 0.0;
+  this.acceleration = -0.001;
   this.color =  color(129, 206, 15,0)
   this.opponent = false;
 
