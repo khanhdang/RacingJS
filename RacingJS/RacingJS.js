@@ -6,7 +6,7 @@ var countdown = 100;
 var opponent_index = 0;
 var speed = -3;
 var background_shift = -999;
-var number_of_bonus = 10;
+var number_of_bonus = 3;
 var bonus = [];
 
 var car_dist_x;
