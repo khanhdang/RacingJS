@@ -1,5 +1,5 @@
 var opponent_cars = [];
-var number_of_opponents = 10;
+var number_of_opponents = 7;
 var your_car;
 var safe_distance;
 var countdown = 100;
@@ -37,7 +37,7 @@ function setup() {
   /*frameRate(30);*/
   your_car = new Car();
   your_car.x = width/2-your_car.width/2;
-  your_car.y= height/2-your_car.height/2;
+  your_car.y= height/2+your_car.height*3;
   your_car.opponent = false;
   for (var i=0; i<number_of_bonus; i++){
     bonus[i] = new Bonus();
@@ -85,7 +85,12 @@ function draw() {
   if(gameover){
      for (var i=0; i<opponent_cars.length; i++){
       opponent_cars[i].stop();
+      
     } 
+    for (var j=0; j<bonus.length; j++) {
+      bonus[j].stop();
+    }
+    background_shift = 0;
     fill(155,0,0,103);
     rect(0,0,width,height);
     textSize(64);

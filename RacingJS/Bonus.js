@@ -32,6 +32,10 @@ function Bonus(){
       this.x = random(width);
       this.speed = -3;
   }   
+  
+  this.stop = function(){
+    this.speed = 0;
+  }
 }
 function star(x, y, radius1, radius2, npoints) {
   var angle = TWO_PI / npoints;

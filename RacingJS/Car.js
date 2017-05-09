@@ -42,7 +42,10 @@ function Car() {
   }
 
   this.crash = function(){
-
+    // I need to improve this function
+    // First, the crash car will be rotated
+    // After 3/4 circle, it turns as normal
+    
     this.color =  color(255, 15, 15)
     this.speed = 0;
     this.acceleration = 0;
