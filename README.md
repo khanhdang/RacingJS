@@ -1,3 +1,3 @@
 Demo:
-<a href="http://khanhdang.github.io/RacingJS/RacingJS/">link</a>
+<a href="http://www.dangnamkhanh.com/repos/RacingJS/RacingJS/index.html">link</a>
 
